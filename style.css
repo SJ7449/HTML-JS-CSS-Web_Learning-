@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Story+Script&display=swap');
+
+:root {
+    --base-color: #ffffff;
+    --text-color: #000000;
+    --primary-color: #8D8DFF;
+    --secondary-color: #ffc06e;
+    --color-1: #F9F6F3;
+    --color-2: #F3F7F9;
+    --color-3: #F6F3F9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--text-color);
+}
+
+body {
+    padding: 1em;
+    background-color: var(--base-color);
+}
+
+h1, h2, h3 {
+    font-family: Ubuntu, Roboto
+}
+
+nav {
+    margin: 1em auto 3em auto;
+    width: min(1000px, 100%);
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    gap: 2em;
+}
+
+nav li:first-child {
+    margin-right: auto;
+    font-family: Ubuntu, Roboto;
+    font-weight: bold;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+nav a:hovor {
+    text-decoration: underline;
+}
+
+header, section {
+    margin: 2em auto;
+    width: min(75em 100%);
+    background-color: var(--color-1);
+    padding: min(2em, 15%);
+    border-radius: 1em;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: center;
+    gap: 3em;
+}
+
+header img {
+    max-width: 100%;
+    border-radius: 1em;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+.text-container {
+    flex: 0 1 34em;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+.text-container p {
+    margin: .75em 0 1em 0;
+    font-size: 1.25rem;
+}
+
+.cta-button {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: var(--primary-color);
+    padding: .75em 1.25em;
+    border-radius: .5em;
+    font-weight: 600;
+}
+
+.secondary {
+    background-color: var(--secondary-color);
+}
+
+.jon-text {
+    margin: .25em 0 1em 0;
+    font-size: 2.25rem;
+}
+
+section {
+    padding: 2em min(2em, 15%);
+    background-color: var(--color-2);
+    text-align: center;
+}
+
+h2 {
+    font-size: 3.5rem;
+}
+
+section p {
+    margin-top: 1em;
+    font-size: 1.25rem;
+}
+
+.spacer {
+    margin: 1.5em;
+    margin-top: 1%;
+}
+
+section#my-work {
+    background-color: var(--color-3);
+}
+
+.grid-container {
+    margin-top: 3em;
+    margin-bottom: 3em;
+    display: grid;
+    width: 125%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "img-3" "img-1" "img-2";
+}
+
+.grid-container img{
+    height: 95%;
+    width: 100%;
+    border-radius: 1.5em;
+    transition: 100ms ease;
+}
+
+.grid-container img:hover {
+    scale: 1.05;
+    transition: 100ms ease-in-out;
+}
+
+details {
+    margin-top: 1em;
+    background-color: var(--base-color);
+    border-radius: 1em;
+}
+
+details summary {
+    padding: 1em;
+    font-size: 1.7em;
+    font-family: Ubuntu, Roboto
+}
+
+details p {
+    padding: 0 1.5em 1em 1.5em;
+}
+
+@media(max-width: 988px){
+    header {
+        text-align: center;
+    }
+
+    header .text-container {
+        padding-top: 0;
+    }
+}
+
+@media(max-width: 640px) {
+    nav li {
+        display: none;
+    }
+
+    nav li:first-child,
+    nav li:last-child {
+        display: block;
+    }
+    
+    header {
+        margin-top: 0;
+    }
+
+    .cta-button {
+        margin-top: .5em;
+        width: 100%;
+    }
+
+    .grid-container {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    
+    .text-container p {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+}
